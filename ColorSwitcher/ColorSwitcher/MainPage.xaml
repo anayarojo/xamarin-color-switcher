@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ColorSwitcher.MainPage">
+
+    <StackLayout>
+        <AbsoluteLayout x:Name="boxColor" BackgroundColor="Gray" HeightRequest="300">
+            <Label x:Name="lblHexValue" 
+                   BackgroundColor="#70000000" TextColor="White" 
+                   HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
+                   AbsoluteLayout.LayoutBounds="0.5,0.5,120,30" AbsoluteLayout.LayoutFlags="PositionProportional">
+                #HEXADECIMAL
+            </Label>
+        </AbsoluteLayout>
+        <StackLayout Margin="20,30,20,0" Orientation="Horizontal">
+            <BoxView WidthRequest="20" HeightRequest="20" BackgroundColor="Red"></BoxView>
+            <Label x:Name="lblRed">Red</Label>
+            <Label x:Name="lblRedValue" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="End">0</Label>
+        </StackLayout>
+        <Slider x:Name="redSlider" Margin="10,15" Minimum="0" Maximum="255" ValueChanged="MixColors"></Slider>
+        <StackLayout Margin="20,15,20,0" Orientation="Horizontal">
+            <BoxView WidthRequest="20" HeightRequest="20" BackgroundColor="Green"></BoxView>
+            <Label x:Name="lblGreen">Green</Label>
+            <Label x:Name="lblGreenValue" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="End">0</Label>
+        </StackLayout>
+        <Slider x:Name="greenSlider" Margin="10,15" Minimum="0" Maximum="255" ValueChanged="MixColors"></Slider>
+        <StackLayout Margin="20,15,20,0" Orientation="Horizontal">
+            <BoxView WidthRequest="20" HeightRequest="20" BackgroundColor="Blue"></BoxView>
+            <Label x:Name="lblBlue">Blue</Label>
+            <Label x:Name="lblBlueValue" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="End">0</Label>
+        </StackLayout>
+        <Slider x:Name="blueSlider" Margin="10,15" Minimum="0" Maximum="255" ValueChanged="MixColors"></Slider>
+    </StackLayout>
+
+</ContentPage>
